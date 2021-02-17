@@ -89,8 +89,9 @@ i = -1
 
 for region in regionsList:
     i += 1
-    if n < m + data[region]["population"]:
+    if n < m:
         charAttributes["region"] = region
+        break
     else:
         m += data[region]["population"]
         if i + 1 == len(regionsList):
@@ -102,13 +103,15 @@ for region in regionsList:
 n = random.random()
 gendersList = list(data[charAttributes["region"]]["Genders"].keys())
 i = -1
+m=0
 for gender in gendersList:
     #print(gender)
     
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m + data[charAttributes["region"]]["Genders"][gender]["population"]/100:
+    if n < m:
         charAttributes["gender"] = gender
+        break
     else:
         m += data[charAttributes["region"]]["Genders"][gender]["population"]/100 #next one!
         if i + 1 == len(gendersList):
@@ -121,16 +124,18 @@ for gender in gendersList:
 NamesList = list(data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"].keys())
 n = random.random()
 i = -1
+m=0
 for name in NamesList:
     #print(gender)
     
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m + data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100:
+    if n < m:
         charAttributes["name"]=name
+        break
     else:
         m += data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100 #next one!
-        if i + 1 == len(namesList):
+        if i + 1 == len(NamesList):
             #we will need to implement the gss thing later, for now it is raise an error
             raise InvalidDataError
 
@@ -138,12 +143,14 @@ for name in NamesList:
 ReligionsList = list(data[charAttributes["region"]]["Religions"].keys())
 n = random.random()
 i = -1
+m=0
 for religion in ReligionsList:
     #print(gender)
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m + /100:
+    if n < m:
         charAttributes["religion"]=religion
+        break
     else:
         m += data[charAttributes["region"]]["Religions"][religion]/100 #next one!
         if i + 1 == len(ReligionsList):
@@ -154,18 +161,54 @@ for religion in ReligionsList:
 
 
 #fifthly, political party (assuming political party is independent of religion, this is not the case)
-PoliticalPartiesList = list(data[charAttributes["region"]][""].keys())
+PoliticalPartiesList = list(data[charAttributes["region"]]["Political Parties"].keys())
 n = random.random()
 i = -1
-for religion in ReligionsList:
+m=0
+for party in PoliticalPartiesList:
     #print(gender)
     i += 1
-    #print(data[region]["Genders"][gender])
-    if n < m + /100:
-        charAttributes["political party"]=religion
+    if n < m: 
+        charAttributes["political party"]=party
+        break
     else:
-        m += data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100 #next one!
+        m += data[charAttributes["region"]]["Political Parties"][party]/100 #next one!
         if i + 1 == len(PoliticalPartiesList):
             #we will need to implement the gss thing later, for now it is raise an error
             raise InvalidDataError
         
+
+#sixthly, Jobs
+JobsList = list(data[charAttributes["region"]]["Jobs"].keys())
+n = random.random()
+i = -1
+m=0
+for job in JobsList:
+    #print(gender)
+    i += 1
+    if n < m:
+        charAttributes["political party"]=party
+        break
+    else:
+        m += data[charAttributes["region"]]["Jobs"][job]/100 #next one!
+        if i + 1 == len(JobsList):
+            #we will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
+
+
+#finally, ages
+AgesList = list(data[charAttributes["region"]]["Ages"].keys())
+n = random.random()
+i = -1
+m=0
+for age in AgesList:
+    #print(gender)
+    i += 1
+    if n < m:
+        charAttributes["age"]=age
+        break
+    else:
+        m += data[charAttributes["region"]]["Ages"][age]/100 #next one!
+        if i + 1 == len(AgesList):
+            #we will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
