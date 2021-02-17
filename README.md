@@ -2,7 +2,7 @@
 
 (Note: This is a work in progress. TODO: publish repo w/ open source license.)
 
-This is a program that will randomly sample a plausible fictional character based on real demographic data (idea originally from [gwern](https://www.gwern.net/Statistical-notes#technology)). To use, run this program in your favorite IDE and incorporate the characters generated therein into your fictional literature. 
+This is a program that will randomly sample a plausible fictional character based on real demographic data (idea originally from [gwern](https://www.gwern.net/Statistical-notes#technology)). To use, run this program in your favorite IDE and incorporate the characters generated therein into your fictional literature. (A bit later, once we are finished with the backend, we will website-ify the generator.)
 
 (You can postselect - i.e. intentionally use only a subset of the characters generated, (say) only rightists, or Muslims - but we *strongly* suggest using every character generated for maximum realism. We plan to implement explicit postselection into our program sometime.)
 
