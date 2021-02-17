@@ -89,7 +89,7 @@ i = -1
 
 for region in regionsList:
     i += 1
-    if n < m:
+    if n > m:
         charAttributes["region"] = region
         break
     else:
@@ -109,7 +109,7 @@ for gender in gendersList:
     
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m:
+    if n > m:
         charAttributes["gender"] = gender
         break
     else:
@@ -130,7 +130,7 @@ for name in NamesList:
     
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m:
+    if n > m:
         charAttributes["name"]=name
         break
     else:
@@ -148,7 +148,7 @@ for religion in ReligionsList:
     #print(gender)
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m:
+    if n > m:
         charAttributes["religion"]=religion
         break
     else:
@@ -168,7 +168,7 @@ m=0
 for party in PoliticalPartiesList:
     #print(gender)
     i += 1
-    if n < m: 
+    if n > m: 
         charAttributes["political party"]=party
         break
     else:
@@ -186,8 +186,8 @@ m=0
 for job in JobsList:
     #print(gender)
     i += 1
-    if n < m:
-        charAttributes["political party"]=party
+    if n > m:
+        charAttributes["job"]=job
         break
     else:
         m += data[charAttributes["region"]]["Jobs"][job]/100 #next one!
@@ -204,7 +204,7 @@ m=0
 for age in AgesList:
     #print(gender)
     i += 1
-    if n < m:
+    if n > m:
         charAttributes["age"]=age
         break
     else:
@@ -212,3 +212,4 @@ for age in AgesList:
         if i + 1 == len(AgesList):
             #we will need to implement the gss thing later, for now it is raise an error
             raise InvalidDataError
+print(charAttributes)
