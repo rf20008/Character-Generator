@@ -1,12 +1,20 @@
 import ast, random
 data = input("input data\n")
+
+#sometime later we need to get the data through a file or something
 data = ast.literal_eval(data)
 print(data)
 print(type(data))
 populationsDict = {}
 charAttributes = {"region": None, "gender": None, "name": None,
-                  "Religion": None, "political party": None, "job": None,
+                  "religion": None, "political party": None, "job": None,
                   "age": None}
+class NonExistingAttributeError(AttributeError):
+    '''An attribute for the character doesn't exist!
+'''
+    pass
+class InvalidDataError(Exception):
+    pass
 ExtrapolationData = {}
 ##Species (maybe later)
 ##Region,
@@ -86,11 +94,12 @@ for region in regionsList:
     else:
         m += data[region]["population"]
         if i + 1 == len(regionsList):
-            #we will need to implement the gss thing later, for now it is pass
-            pass
-        #data[region]["population"] is the percentage of people in this region
+            #I will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
+        
 
 #next we do Gender
+n = random.random()
 gendersList = list(data[charAttributes["region"]]["Genders"].keys())
 i = -1
 for gender in gendersList:
@@ -99,29 +108,64 @@ for gender in gendersList:
     i += 1
     #print(data[region]["Genders"][gender])
     if n < m + data[charAttributes["region"]]["Genders"][gender]["population"]/100:
-        charAttributes["gender"] = region
+        charAttributes["gender"] = gender
     else:
         m += data[charAttributes["region"]]["Genders"][gender]["population"]/100 #next one!
         if i + 1 == len(gendersList):
-            #we will need to implement the gss thing later, for now it is pass
-            pass
-        #data[region]["population"] is the percentage of people in this region
+            #I will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
 
 
 
 #now, Names
 NamesList = list(data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"].keys())
+n = random.random()
 i = -1
-for gender in gendersList:
+for name in NamesList:
     #print(gender)
     
     i += 1
     #print(data[region]["Genders"][gender])
-    if n < m + data[region]["Genders"][gender]["population"]/100:
-        charAttributes["gender"] = region
+    if n < m + data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100:
+        charAttributes["name"]=name
     else:
-        m += data[region]["Genders"][gender]["population"]/100 #next one!
-        if i + 1 == len(gendersList):
-            #we will need to implement the gss thing later, for now it is pass
-            pass
-        #data[region]["population"] is the percentage of people in this region
+        m += data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100 #next one!
+        if i + 1 == len(namesList):
+            #we will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
+
+#fourthly, religion
+ReligionsList = list(data[charAttributes["region"]]["Religions"].keys())
+n = random.random()
+i = -1
+for religion in ReligionsList:
+    #print(gender)
+    i += 1
+    #print(data[region]["Genders"][gender])
+    if n < m + /100:
+        charAttributes["religion"]=religion
+    else:
+        m += data[charAttributes["region"]]["Religions"][religion]/100 #next one!
+        if i + 1 == len(ReligionsList):
+            #we will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
+
+
+
+
+#fifthly, political party (assuming political party is independent of religion, this is not the case)
+PoliticalPartiesList = list(data[charAttributes["region"]][""].keys())
+n = random.random()
+i = -1
+for religion in ReligionsList:
+    #print(gender)
+    i += 1
+    #print(data[region]["Genders"][gender])
+    if n < m + /100:
+        charAttributes["political party"]=religion
+    else:
+        m += data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"][name]/100 #next one!
+        if i + 1 == len(PoliticalPartiesList):
+            #we will need to implement the gss thing later, for now it is raise an error
+            raise InvalidDataError
+        
