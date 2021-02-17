@@ -1,1 +1,26 @@
-{}
+{
+  "China": {
+    "population": 17.9
+  },
+  "India": {
+    "population": 17.5
+  },
+  "United States": {
+    "population": 4.22
+  },
+  "Indonesia": {
+    "population": 3.44
+  },
+  "Pakistan": {
+    "population": 2.87
+  },
+  "Brazil": {
+    "population": 2.71
+  },
+  "Nigeria": {
+    "population": 2.69
+  },
+  
+
+}
+
