@@ -1,11 +1,11 @@
-import json, random
+import ast, random
 data = input("input data\n")
-data = json.loads(data)
+data = ast.literal_eval(data)
 print(data)
 print(type(data))
 populationsDict = {}
 charAttributes = {"region": None, "gender": None, "name": None,
-                  "Religion": None, "political_party": None, "job": None,
+                  "Religion": None, "political party": None, "job": None,
                   "age": None}
 ExtrapolationData = {}
 ##Species (maybe later)
@@ -62,8 +62,7 @@ ExtrapolationData = {}
 ##        10: 100.0
 ##      }
 ##    }
-  }
-}
+##}
 
 #repeat for each region
 regionsList= list(data.keys())
@@ -92,15 +91,37 @@ for region in regionsList:
         #data[region]["population"] is the percentage of people in this region
 
 #next we do Gender
-GenderList = data[characterAttributes["region"]]["genders"].keys()
+gendersList = list(data[charAttributes["region"]]["Genders"].keys())
 i = -1
-for gender in GendersList:
+for gender in gendersList:
+    #print(gender)
+    
     i += 1
-    if n < m + data[region]["gender"][gender]:
+    #print(data[region]["Genders"][gender])
+    if n < m + data[charAttributes["region"]]["Genders"][gender]["population"]/100:
         charAttributes["gender"] = region
     else:
-        m += data[region]["population"]
-        if i + 1 == len(GendersList):
+        m += data[charAttributes["region"]]["Genders"][gender]["population"]/100 #next one!
+        if i + 1 == len(gendersList):
             #we will need to implement the gss thing later, for now it is pass
             pass
-        #data[region]["gender"] is the percentage of gender in this region
+        #data[region]["population"] is the percentage of people in this region
+
+
+
+#now, Names
+NamesList = list(data[charAttributes["region"]]["Genders"][charAttributes["gender"]]["Names"].keys())
+i = -1
+for gender in gendersList:
+    #print(gender)
+    
+    i += 1
+    #print(data[region]["Genders"][gender])
+    if n < m + data[region]["Genders"][gender]["population"]/100:
+        charAttributes["gender"] = region
+    else:
+        m += data[region]["Genders"][gender]["population"]/100 #next one!
+        if i + 1 == len(gendersList):
+            #we will need to implement the gss thing later, for now it is pass
+            pass
+        #data[region]["population"] is the percentage of people in this region
