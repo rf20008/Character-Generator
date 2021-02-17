@@ -15,7 +15,7 @@
 import random
 
 #read & preprocess world population distribution data
-with open('data/wikipedia_population_clean.txt', 'r') as f:
+with open('data/text clean data/wikipedia_population_clean.txt', 'r') as f:
     popdata_lines = f.readlines()
     f.close()
 popdata = [l.split(' ') for l in popdata_lines]
