@@ -5,8 +5,6 @@ import ast, random
 with open(input('What file? '), 'r') as f:
     data = ast.literal_eval(f.read())
     f.close()
-print(data)             #debug
-print(type(data))       #debug
 
 #variables
 populationsDict = {}
@@ -41,16 +39,11 @@ def select(values):
             return item
     return item # Shouldn't get here, but just in case of rounding...
 
-#TODO: simplify code
-#TODO: implement random trait selection
-#repeat for each region
-regionsList= list(data.keys())
-for region in regionsList:
-    populationsDict[region] = data[region]["population"]
-    
+#TODO: implement random trait selection for all traits
 
 #first for region
-print(f'regionsList = {regionsList}') #debug
+region = select({region: data[region]["population"] for region in data.keys()})
+print(f'region = {region}') #debug
 ###next we do Gender
 ##gendersList = list(data[charAttributes["region"]]["Genders"].keys())
 ##print(f'gendersList = {gendersList}') #debug
