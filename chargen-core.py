@@ -12,6 +12,8 @@
 #TODO: sample gender from real data
 #TODO: sample poltical/religious/etc. beliefs from real data
 
+#WARNING: This is deprecated
+
 import random
 
 #read & preprocess world population distribution data
