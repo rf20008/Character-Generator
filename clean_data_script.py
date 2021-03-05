@@ -4,10 +4,27 @@ ReligionsList = {}
 PoliticalPartiesList = {}
 AgesList = {}
 JobsList = {}
-
+runs = 0
 
 def i(j):
+    global runs
+    runs +=1
+    if runs%5 == 0:
+        print("Data so far")
+        try:
+            print(Percentage)
+            print(GenderList)
+            print(ReligionsList)
+            print(PoliticalPartiesList)
+            print(AgesList)
+            print(JobsList)
+        except:
+            print("O")
+            
+            
+
     return input(j)
+
 
 countryName = i("Country Name?\n")
 Percentage = i("Percentage of people in the region?\n")
