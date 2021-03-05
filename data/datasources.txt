@@ -2,4 +2,4 @@ Data sources:
 Religious Population data from Wikipedia: https://en.wikipedia.org/w/index.php?title=List_of_religious_populations&oldid=1009224296
 Female Name data from census.gov:  https://www2.census.gov/topics/genealogy/1990surnames/dist.female.first
 Male Name data from census.gov: https://www2.census.gov/topics/genealogy/1990surnames/dist.male.first
-Population data from
+Population data from Wikipedia: https://en.wikipedia.org/w/index.php?title=List_of_countries_and_dependencies_by_population&oldid=1010066121
