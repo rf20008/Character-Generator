@@ -17,6 +17,19 @@
       "Spiritism": 0.19, "Judaism": 0.18, "Baháʼí": 0.07, "Jainism": 0.05, "Shinto": 0.05, "Cao Dai": 0.05,
       "Zoroastrianism": 0.03, "Tenrikyo": 0.02, "Amimism": 0.02, "Neo-Paganism": 0.01, "Unitarian Universalism": 0.01,
       "Rastafari": 0.007
+    },
+    "Political Parties": {
+      "Democratic Party": 51.27, "Republican": 46.82, "Other": 100.0
+    },
+    "Jobs": {
+      "Unavaliable": 100000.000
+    },
+    "Ages": {
+      "Under 5": 6.1, "5 to 9": 6.2, "10 to 14": 6.4, "15 to 19": 6.4,
+      "20 to 24": 6.6, "25 to 29": 7.2, "30 to 34": 6.8, "35 to 39": 6.6,
+      "40 to 44": 6.0, "45 to 49": 6.3, "50 to 54": 6.3, "55 to 59": 6.5,
+      "60 to 64": 6.3, "65 to 69": 5.4, "70 to 74": 4.4, "75 to 79": 2.9,
+      "80 to 84": 1.9, "85 or older": 1.8
     }
   }
 }
