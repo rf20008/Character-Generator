@@ -44,6 +44,19 @@ def select(values):
 #first for region
 region = select({region: data[region]["population"] for region in data.keys()})
 print(f'region = {region}') #debug
+charAttributes["region"] = region
+#gender?
+gender = select({gender: data[region]["Genders"][gender]["population"] for gender in data[region]["Genders"].keys()})
+print(f'gender = {gender}') #debug
+charAttrributes["gender"]=gender
+
+
+
+##########-------------------------------------------#########
+#Old code burial
+#########---------------------------------------------########
+#burial starts under this line
+############-----------------------------------------#########
 ###next we do Gender
 ##gendersList = list(data[charAttributes["region"]]["Genders"].keys())
 ##print(f'gendersList = {gendersList}') #debug
