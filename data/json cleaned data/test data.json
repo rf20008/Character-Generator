@@ -1,0 +1,34 @@
+{
+  "A": {
+    "population": 99.0,
+    "Genders": {
+      "Male": {
+        "population": 50.0, "Names": {
+          "Nusuitclknudir":20.0, "Aerstiodnckzrcbnd": 19.0, "rslcntukazndsn": 21.0, "vrsckjnxsnkz": 10.0, "vuinskccz": 10.0, "n ucidknux": 20.0
+        }
+      },
+      "Female": {
+        "population": 49.0, "Names": {
+            "Rdknisekuitynrbukd": 80.0, "ecdkjbsdxiuzc": 20.0
+          }
+        },
+      "O": {
+        "population": 1.0, "Names": {
+          "O": 100.0
+        }
+      }
+      },
+      "Religions": {
+        "4iluedybjsdkvbrdyuvibdt": 100.0,
+      },
+      "Political Parties": {
+        "Rem,clukbdrtv": 50.0, "bs;oirtnvildnvs": 50.0
+      },
+      "Jobs": {
+        "Rab,.jsnvisn": 20.0, "barilnknu": 80.0
+      },
+      "Ages": {
+        10: 100.0
+      }
+    }
+  }
