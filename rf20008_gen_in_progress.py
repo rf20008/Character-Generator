@@ -1,10 +1,14 @@
+#TODO: test
 import ast, random
 
-#TODO: read data from file
-data = input("input data\n")
-data = ast.literal_eval(data)
-print(data)
-print(type(data))
+#data preparation
+with open(input('What file? '), 'r') as f:
+    data = ast.literal_eval(f.read())
+    f.close()
+print(data)             #debug
+print(type(data))       #debug
+
+#variables
 populationsDict = {}
 charAttributes = {"region": None,
                   "gender": None,
@@ -13,13 +17,16 @@ charAttributes = {"region": None,
                   "political party": None,
                   "job": None,
                   "age": None}
+
+#custom error types
 class NonExistingAttributeError(AttributeError):
     '''An attribute for the character doesn't exist!'''
     pass
 class InvalidDataError(Exception):
     '''The data is invalid.'''
     pass
-ExtrapolationData = {}
+
+#TODO: move 
 ##Species (maybe later)
 ##Region,
 ##      Percentage of people in this region,
@@ -95,7 +102,7 @@ def select(values):
             return item
     return item # Shouldn't get here, but just in case of rounding...
 
-
+#TODO: simplify code
 #first for region
 n = random.random()
 m = 0
