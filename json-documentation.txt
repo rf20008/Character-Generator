@@ -1,0 +1,55 @@
+Species (maybe later)
+Region,
+      Percentage of people in this region,
+  
+      Genders (names),
+          GenderName:
+              Percentage with this gender
+              Names,
+                  Name,
+                  Percentage
+        Religions (names),
+          Religion Name, Percentage
+          Percentage with this religion (in this region)
+        Political Parties (names),
+          Party name, Percentage  
+          Percentage with this party (in this region)
+        Jobs,
+          Percentage of people with this job
+        Ages,
+          Percentage of people with this age
+example:
+{
+  "Data_testregion1": {
+    "population": 99.0,
+    "Genders": {
+      "Male": {
+        "population": 50.0, "Names": {
+          "Matthew":20.0, "Andrew": 19.0, "David": 21.0, "Seth": 10.0, "Riley": 10.0, "Luke": 20.0
+        }
+      },
+      "Female": {
+        "population": 49.0, "Names": {
+            "Ophelia": 80.0, "Olivia": 20.0
+          }
+        },
+      "O": {
+        "population": 1.0, "Names": {
+          "O": 100.0
+        }
+      }
+      },
+      "Religions": {
+        "Christian": 100.0,
+      },
+      "Political Parties": {
+        "Democratic": 50.0, "Republican": 50.0
+      },
+      "Jobs": {
+        "Job1": 20.0, "Job2": 80.0
+      },
+      "Ages": {
+        10: 100.0
+      }
+    }
+}
