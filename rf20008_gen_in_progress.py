@@ -1,4 +1,5 @@
 #TODO: test
+GUI = False
 import ast, random
 
 #returning - preparing for GUI-ification (although I haven't figured how to make this return anything)
@@ -10,6 +11,10 @@ def JSONify(chardatas = [{"exists": "false"}], success="true",
         return {"success": success, "characters": chardatas, "cause": errorCause, "debug": debugInfo, "extraInfo":extraInfo}
     else:
         return {"success": success, "characters":  chardatas, "debug": debugInfom "extraInfo": extraInfo}
+#for gui-ification
+if GUI:
+            import requests
+
 
 
 
