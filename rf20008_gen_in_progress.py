@@ -1,9 +1,9 @@
 #TODO: test
 GUI = False
-import ast, random
+import ast, random, json
 
 #returning - preparing for GUI-ification (although I haven't figured how to make this return anything)
-def JSONify(chardatas = [{"exists": "false"}], success="true",
+def JSONify(chardatas = [{"exists": "false"}], success="false",
             errorCause = "No Error", debugInfo = {"provided": "false"}, 
             extraInfo = {"exists": "false"}):
     if not success == "true":
