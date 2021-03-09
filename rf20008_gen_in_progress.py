@@ -1,6 +1,18 @@
 #TODO: test
 import ast, random
 
+#returning - preparing for GUI-ification (although I haven't figured how to make this return anything)
+def JSONify(chardatas = [{"exists": "false"}], success="true",
+            errorCause = "No Error", debugInfo = "Debug information not avaliable"
+            , extraInfo = {}):
+    if not success == "true":
+        
+        return {"success": success, "characters": chardatas, "cause": errorCause, "debug": debugInfo, "extraInfo":extraInfo}
+    else:
+        return {"success": success, "characters":  chardatas, "debug": debugInfom "extraInfo": extraInfo}
+
+
+
 #data preparation
 with open(input('What file? '), 'r') as f:
     data = ast.literal_eval(f.read())
