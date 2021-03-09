@@ -8,7 +8,8 @@ with open(input('What file? '), 'r') as f:
 
 #variables
 populationsDict = {}
-charAttributes = {"region": None,
+charAttributes = {"exists": "true"
+    "region": None,
                   "gender": None,
                   "name": None,
                   "religion": None,
