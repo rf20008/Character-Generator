@@ -27,7 +27,7 @@ with open(input('What file? '), 'r') as f:
 
 #variables
 populationsDict = {}
-charAttributes = {"exists": "true"
+charAttributes = {"exists": "true",
     "region": None,
                   "gender": None,
                   "name": None,
@@ -63,11 +63,11 @@ def select(values):
 
 #first for region
 region = select({region: data[region]["population"] for region in data.keys()})
-print(f'region = {region}') #debug
+print(region) #debug
 charAttributes["region"] = region
 #gender?
 gender = select({gender: data[region]["Genders"][gender]["population"] for gender in data[region]["Genders"].keys()})
-print(f'gender = {gender}') #debug
+print(gender) #debug
 charAttrributes["gender"]=gender
 
 
