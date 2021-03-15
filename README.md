@@ -10,4 +10,4 @@ Credit: duck_master, rf20008.
 
 # License
 
-This repository is currently licensed under the MIT License
+This repository is currently licensed under the MIT License.
